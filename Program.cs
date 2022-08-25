@@ -1,22 +1,31 @@
 ﻿/*
 //задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-Console.WriteLine("Введите трехзначное число:");
-int num = Convert.ToInt32(Console.ReadLine());
-
-              Console.WriteLine("{0}->{1}",num);
+Console.WriteLine("Введите трехзначное число: ");
+    while(true)
+    {
+        string input = Console.ReadLine();
+        if(!input.Equals("exit"))
+            Console.WriteLine("{0}->{1}",input, input[1]);
+        else
+            break;
+    }
+             
 
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 Console.WriteLine("Введите число:");
 int num = Convert.ToInt32(Console.ReadLine());
 while(true)
-    	if(num > 99)
+{
+        if(num > 99)
 	{
   	  Console.WriteLine(( num / 100) % 10);
 	}
         else
             Console.WriteLine("no");
+        break;
+}
 
 
 
